@@ -1,18 +1,19 @@
-6 9 5 8 3
+#include <stdio.h> 
+int main ( )
+{
+   char c[2][5] = { "6938" , "8254" };
+   char *p[2];
+   int i, j, s=0;
+   for (int i = 0; i < 2; i++){
+        p[i] = c[i];
+   }
+   for ( i = 0; i < 2; i++){
+        for ( j =0; p[i][j] > 0; ){ 
+            s = 10 * s + p[i][j] - '0';
+            j += 2;
+        }
+   }
+   printf ( " %d \n " , s );
 
-low = 0
-list = 0
-
-9 !< 6
-
-6 9 5 8 3
-
-5 < 6
-
-6 5 9 8 3
-list = 1
-
-list = 2
-6 5 3 8 9
-
-3 5 6 8 9
+   return 0;
+}
