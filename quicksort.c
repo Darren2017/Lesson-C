@@ -6,8 +6,14 @@ void swap(char s[], int i, int j);
 
 int main()
 {
-    char a[20] = "987654321";
-    quicksort(a, 0, 8);   
+    char a[20];
+    int n;
+    scanf("%d", &n);
+    getchar();
+    for(int i = 0; i < n; i++){
+        scanf("%c", &a[i]);
+    }
+    quicksort(a, 0, n - 1);   
     printf("%s", a);
 }
 
