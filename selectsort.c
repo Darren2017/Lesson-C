@@ -5,8 +5,8 @@ void swap(char s[], int i, int j);
 
 int main()
 {
-    char a[20] = "987654321";
-    selectsort(9, a);   
+    char a[20] = "9876543210";
+    selectsort(10, a);   
     printf("%s", a);
 }
 
@@ -23,8 +23,8 @@ void selectsort(int n, char a[]){
 }
 
 void swap(char s[], int i, int j){
-    int temp;
-    temp = s[i];
+    int tem;
+    tem = s[i];
     s[i] = s[j];
-    s[j] = temp;
+    s[j] = tem;
 }
