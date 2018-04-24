@@ -30,6 +30,7 @@ void swap(int a, int b){
 
 int pre(int x)
 {
+    if(x == 1)  return 0;
     int k = 2;
     while(k <= (int)sqrt(x)){
         if(x % k == 0){
