@@ -5,8 +5,14 @@ void swap(char s[], int i, int j);
 
 int main()
 {
-    char a[20] = "9876543210";
-    selectsort(10, a);   
+    char a[20];
+    int n;
+    scanf("%d", &n);
+    getchar();
+    for(int i = 0; i < n; i++){
+        scanf("%c", &a[i]);
+    }
+    selectsort(n, a);   
     printf("%s", a);
 }
 
@@ -18,7 +24,9 @@ void selectsort(int n, char a[]){
                 k = j;
             }
         }
-        swap(a, k, i);
+        if(k != i){
+            swap(a, k, i);
+        }
     }
 }
 
