@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 void insert(int*a,int n);
-void insert2(int*a,int n);
+void insert2(int*a,int n);//升序
 
 int main(void)
 {
