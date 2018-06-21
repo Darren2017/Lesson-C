@@ -7,25 +7,15 @@ void swap(char s[], int i, int j);
 int main()
 {
     char a[20] = "987654321";
-    bubsort1(9, a);   
+    bubsort(9, a);   
     printf("%s", a);
 }
 
 void bubsort(int n, char a[]){
-    for(int i = 1; i < n ; i++){
-        for(int j = 0; j < n - 1; j++){
-            if(a[j] < a[j + 1]){
-                swap(a, j, j + 1);
-            }
-        }
-    }
-}
-
-void bubsort1(int n, char a[]){
-    for(int i = 0; i < n; i++){
-        for(int j = n - 1; j > i; j--){
-            if(a[j] < a[j - 1]){
-                swap(a, j, j - 1);
+    for(int i = 0; i < n - 1; i++){
+        for(int j = i + 1; j < n; j++){
+            if(a[i] > a[j]){
+                swap(a, i, j);
             }
         }
     }
